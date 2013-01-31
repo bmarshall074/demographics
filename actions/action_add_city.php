@@ -10,11 +10,11 @@ if( $_POST['city_name'] != '' &&
 	$_POST['city_pop'] != '' &&
 	$_POST['city_area'] != '') {
 	
-	// Add this band to the CSV file
+	// Add this city to the CSV file
 	// 	(1) Open the file for writing
 	$f = fopen('../data/cities.csv','a');
-	// 	(2) Write the new band's info to the file
-	fwrite($f,"\n{$_POST['city_name']},{$_POST['city_genre']},{$_POST['city_rank']},{$_POST['city_pop']},{$_POST['city_area']}");
+	// 	(2) Write the new city's info to the file
+	fwrite($f,"\n{$_POST['city_name']},{$_POST['city_state']},{$_POST['city_rank']},{$_POST['city_pop']},{$_POST['city_area']}");
 	// 	(3) Close the file
 	fclose($f);
 	
@@ -23,7 +23,7 @@ if( $_POST['city_name'] != '' &&
 			'type' => 'success'
 	);
 	
-	//Redirect to list of bands
+	//Redirect to list of cities
 	header('Location:../?p=list_cities');
 } else {
 	// Store submitted data into session data

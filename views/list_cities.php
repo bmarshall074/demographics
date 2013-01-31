@@ -1,4 +1,4 @@
-<h2>All Bands</h2>
+<h2>Cities</h2>
 <table class="table table-striped">
 <thead>
 <tr>
@@ -6,7 +6,7 @@
 <th>State</th>
 <th>Rank</th>
 <th>Population</th>
-<th>Area</th>
+<th>Area (square miles)</th>
 <th>Edit / Delete</th>
 </tr>
 </thead>
@@ -33,7 +33,7 @@ foreach($lines as $line) {
 	echo 	"<td>$rank</td>";
 	echo 	"<td>$pop</td>";
 	echo 	"<td>$area</td>";
-	echo 	"<td><a class=\"btn btn-warning\" href=\"./?p=form_edit_band&band=$i\"><i class=\"icon-edit icon-white\"></i></a> <a class=\"btn btn-danger\" href=\"actions/delete_band.php?linenum=$i\"><i class=\"icon-trash icon-white\"></i></a></td>";
+	echo 	"<td><a class=\"btn btn-warning\" href=\"./?p=form_edit_city&city=$i\"><i class=\"icon-edit icon-white\"></i></a> <a class=\"btn btn-danger\" href=\"actions/delete_city.php?linenum=$i\"><i class=\"icon-trash icon-white\"></i></a></td>";
 	echo '</tr>';
 
 	$i++; // increment line number
