@@ -6,7 +6,7 @@
 <th>State</th>
 <th>Rank</th>
 <th>Population</th>
-<th>Area (square miles)</th>
+<th>Area (mi&sup2;)</th>
 <th>Edit / Delete</th>
 </tr>
 </thead>
@@ -21,7 +21,7 @@ $i = 0;
 	
 //Iterate over the array of lines
 foreach($lines as $line) {
-	$parts = explode(',',$line);
+	$parts = explode('/',$line);
 	$name = $parts[0];
 	$state = $parts[1];
 	$rank = $parts[2];
@@ -33,7 +33,8 @@ foreach($lines as $line) {
 	echo 	"<td>$rank</td>";
 	echo 	"<td>$pop</td>";
 	echo 	"<td>$area</td>";
-	echo 	"<td><a class=\"btn btn-warning\" href=\"./?p=form_edit_city&city=$i\"><i class=\"icon-edit icon-white\"></i></a> <a class=\"btn btn-danger\" href=\"actions/delete_city.php?linenum=$i\"><i class=\"icon-trash icon-white\"></i></a></td>";
+	$onclick = "return confirm('Are you sure you want to delete $name?')";
+	echo 	"<td><a class=\"btn btn-warning\" href=\"./?p=form_edit_city&city=$i\"><i class=\"icon-edit icon-white\"></i></a> <a class=\"btn btn-danger\" onclick=\"$onclick\" href=\"actions/delete_city.php?linenum=$i\"><i class=\"icon-trash icon-white\"></i></a></td>";
 	echo '</tr>';
 
 	$i++; // increment line number

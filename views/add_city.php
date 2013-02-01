@@ -32,6 +32,6 @@
 </div>
 <div class="form-actions">
 <button type="submit" class="btn btn-success"><i class="icon-plus-sign icon-white"></i> Add City</button>
-<button type="button" class="btn">Cancel</button>
+<button type="button" class="btn" onclick="window.history.go(-1)">Cancel</button>
 </div>
 </form>

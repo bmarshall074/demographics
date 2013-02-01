@@ -1,6 +1,3 @@
-<pre><?php print_r($_POST);?></pre>
-
-
 <?php
 session_start();
 // Read file into array
@@ -22,5 +19,5 @@ $_SESSION['message'] = array(
 		'type' => 'info'
 );
 
-//header('Location:../?p=list_cities');
+header('Location:../?p=list_cities');
 ?>
