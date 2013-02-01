@@ -12,7 +12,7 @@ if( $_POST['city_name'] != '' &&
 	// 	(1) Open the file for writing
 	$f = fopen('../data/cities.csv','a');
 	// 	(2) Write the new city's info to the file
-	fwrite($f,"\n{$_POST['city_name']},{$_POST['city_state']},{$_POST['city_rank']},{$_POST['city_pop']},{$_POST['city_area']}");
+	fwrite($f,"\n{$_POST['city_name']}/{$_POST['city_state']}/{$_POST['city_rank']}/{$_POST['city_pop']}/{$_POST['city_area']}");
 	// 	(3) Close the file
 	fclose($f);
 	

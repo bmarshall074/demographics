@@ -4,7 +4,7 @@ session_start();
 $lines = file('../data/cities.csv', FILE_IGNORE_NEW_LINES);
 
 // Replace line with new values
-$lines[$_POST['linenum']] = "{$_POST['city_name']},{$_POST['city_state']},{$_POST['city_rank']},{$_POST['city_pop']},{$_POST['city_area']}";
+$lines[$_POST['linenum']] = "{$_POST['city_name']}/{$_POST['city_state']}/{$_POST['city_rank']}/{$_POST['city_pop']}/{$_POST['city_area']}";
 
 // Create the string to write to the file
 $data_string = implode("\n",$lines);
