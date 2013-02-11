@@ -2,7 +2,7 @@
 $lines = file('data/cities.csv',FILE_IGNORE_NEW_LINES);
 
 // Get the city association with the 'city' parameter in the query string
-$city = explode(',',$lines[$_GET['city']]);
+$city = explode('/',$lines[$_GET['city']]);
 ?>
 
 <h2>Edit City</h2>
